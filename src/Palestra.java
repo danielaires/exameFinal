@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class Palestra {
     private int id;
@@ -8,17 +7,18 @@ public class Palestra {
     private int vagas;
     private double valor;
 
-    ArrayList participante = new ArrayList<>();
+    private ArrayList participante;
+    private Palestrante palestrante;
 
 
-    public Palestra(int id, String nome, String inicio, String fim, int vagas, double valor, ArrayList participante) {
+    public Palestra(int id, String nome, String inicio, String fim, int vagas, double valor) {
         this.id = id;
         this.nome = nome;
         this.inicio = inicio;
         this.fim = fim;
         this.vagas = vagas;
         this.valor = valor;
-        this.participante = participante;
+        this.participante = new ArrayList<>();
     }
 
     public int getId() {
@@ -77,6 +77,15 @@ public class Palestra {
         this.participante = participante;
     }
 
+    public Palestrante getPalestrante() {
+        return this.palestrante;
+    }
+
+
+    public void setPalestrante(Palestrante p) {
+        this.palestrante = p;
+    }
+
     @Override
     public String toString() {
         return "Palestra{" +
@@ -86,7 +95,8 @@ public class Palestra {
                 ", fim='" + fim + '\'' +
                 ", vagas=" + vagas +
                 ", valor=" + valor +
-                ", participante=" + participante +
+                ", participantes=" + participante +
+                ", palestrante=" + palestrante +
                 '}';
     }
 

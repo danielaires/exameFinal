@@ -1,45 +1,51 @@
-import java.util.Calendar;
 import java.util.List;
 import java.util.Scanner;
 
 public class PalestraView {
 
-    private DaoPalestra dp;
+    private DaoPalestra daoPalestra;
 
     public PalestraView(DaoPalestra dp) {
-        this.dp = dp;
+        this.daoPalestra = dp;
     }
 
-    public void obterDados(){
+    public Palestra obterDados() {
 
         Scanner e = new Scanner(System.in);
 
+        System.out.println("-- Cadastro de Palestra --");
         System.out.println("Digite o id: ");
         int id = e.nextInt();
+        e.nextLine();
+
         System.out.println("Digite o nome: ");
         String nome = e.nextLine();
+
         System.out.println("Digite o Horario inicial: ");
         String i = e.nextLine();
+
         System.out.println("Digite o Horario final: ");
         String f = e.nextLine();
+
         System.out.println("Digite as vagas: ");
         int v = e.nextInt();
+        e.nextLine();
+
         System.out.println("Digite o valor: ");
-        double val = e.nextDouble();
+        double valor = e.nextDouble();
+        e.nextLine();
 
-       // Palestra pale = new Palestra(id,nome,i,f,v,val,);
+        Palestra palestra = new Palestra(id, nome, i, f, v, valor);
 
-       // dp.inserir(pale);
+        daoPalestra.inserir(palestra);
 
-
+        return palestra;
     }
 
-
-    public List obterPalestra(DaoPalestra daoPalestra){
+    public List obterPalestra() {
 
         return daoPalestra.listar();
 
     }
-
 
 }

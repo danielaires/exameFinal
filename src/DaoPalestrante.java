@@ -16,7 +16,7 @@ public class DaoPalestrante implements Dao {
 
     @Override
     public List listar() {
-       return b.getListPalestrates();
+        return b.getListPalestrates();
 
     }
 }

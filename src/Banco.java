@@ -22,7 +22,7 @@ public class Banco {
 
     ArrayList listPalestra = new ArrayList<>();
 
-    public ArrayList getListPalestra() {
+    public ArrayList<Palestra> getListPalestra() {
 
         return listPalestra;
     }
@@ -55,4 +55,3 @@ public class Banco {
         this.listParticipante = listParticipante;
     }
 }
-

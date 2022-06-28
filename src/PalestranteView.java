@@ -7,6 +7,7 @@ public class PalestranteView {
 
         Scanner e = new Scanner(System.in);
 
+        System.out.println("-- Cadastro de Palestrante --");
         System.out.println("Digite o id: ");
         int id = e.nextInt();
         System.out.println("Digite o nome: ");
@@ -19,14 +20,13 @@ public class PalestranteView {
         String t = e.nextLine();
         System.out.println("Digite a instituicao de trabalho: ");
         String it = e.nextLine();
-        Palestrante palestrante = new Palestrante(id, nome,ano,t,it);
+        Palestrante palestrante = new Palestrante(id, nome, ano, t, it);
 
         return palestrante;
 
     }
 
-
-    public List obterPalestrante(DaoPalestrante daoPalestrante){
+    public List obterPalestrante(DaoPalestrante daoPalestrante) {
 
         return daoPalestrante.listar();
 

@@ -1,15 +1,11 @@
-import java.util.ArrayList;
-import java.util.Objects;
-
 public class Participante extends Pessoa {
 
     private boolean temFormacaoSuperior;
     Palestra palestra;
 
-    public Participante(int id, String nome, int anoNascimento, boolean temFormacaoSuperior, Palestra palestra) {
+    public Participante(int id, String nome, int anoNascimento, boolean temFormacaoSuperior) {
         super(id, nome, anoNascimento);
         this.temFormacaoSuperior = temFormacaoSuperior;
-        this.palestra = palestra;
     }
 
 

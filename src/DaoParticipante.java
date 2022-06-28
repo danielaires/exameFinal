@@ -4,7 +4,7 @@ public class DaoParticipante implements Dao {
 
     Banco b;
 
-    private DaoParticipante(Banco b) {
+    public DaoParticipante(Banco b) {
         this.b = b;
     }
 
